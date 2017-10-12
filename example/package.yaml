@@ -18,4 +18,4 @@ dependencies:
 executables:
   example:
     source-dirs:      src
-    main:             Main.hs
+    main:             Sin.hs
