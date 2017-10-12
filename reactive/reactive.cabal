@@ -1,0 +1,68 @@
+-- This file has been generated from package.yaml by hpack version 0.18.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           reactive
+version:        0.11.5
+synopsis:       Push-pull functional reactive programming
+description:    /Reactive/ is a simple foundation for programming reactive systems functionally.  Like Fran\/FRP, it has a notions of (reactive) behaviors and events.  Unlike most previous FRP implementations, Reactive has a hybrid demand/data-driven implementation, as described in the paper \"Push-pull functional reactive programming\", <http://conal.net/papers/push-pull-frp/>. . This version of Reactive has some serious bugs that show up particularly with some uses of the Event monad.  Some problems have been due to bugs in the GHC run-time support for concurrency.  I do not know whether the remaining problems in Reactive are still more subtle RTS issues, or some subtle laziness bugs in Reactive.  Help probing the remaining difficulties is most welcome. . Import "FRP.Reactive" for FRP client apps.  To make a Reactive adapter for an imperative library, import "FRP.Reactive.LegacyAdapters". . Please see the project wiki page: <http://haskell.org/haskellwiki/reactive> . &#169; 2007-2009 by Conal Elliott; GNU AGPLv3 license (see COPYING). I am not thrilled with GPL, and I doubt I'll stay with it for long. If you would like different terms, please talk to me. . With contributions from: Robin Green, Thomas Davie, Luke Palmer, David Sankel, Jules Bean, Creighton Hogg, Chuan-kai Lin, and Richard Smith.  Please let me know if I've forgotten to list you.
+category:       reactivity, FRP
+stability:      provisional
+homepage:       http://haskell.org/haskellwiki/reactive
+bug-reports:    http://trac.haskell.org/reactive
+author:         Conal Elliott
+maintainer:     conal@conal.net
+copyright:      (c) 2007-2009 by Conal Elliott
+license:        OtherLicense
+license-file:   COPYING
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >= 4 && <5
+    , old-time
+    , random
+    , QuickCheck >= 2.1.0.2
+    , TypeCompose >= 0.8.0
+    , vector-space >= 0.5
+    , unamb >= 0.1.5
+    , checkers >= 0.2.3
+    , Stream >= 0.3.1
+    , pointed
+    , comonad
+    , parallel
+  exposed-modules:
+      Data.AddBounds
+      Data.Max
+      Data.Min
+      Data.PairMonad
+      FRP.Reactive
+      FRP.Reactive.Behavior
+      FRP.Reactive.Fun
+      FRP.Reactive.Future
+      FRP.Reactive.Improving
+      FRP.Reactive.Internal.Behavior
+      FRP.Reactive.Internal.Chan
+      FRP.Reactive.Internal.Clock
+      FRP.Reactive.Internal.Fun
+      FRP.Reactive.Internal.Future
+      FRP.Reactive.Internal.IVar
+      FRP.Reactive.Internal.Misc
+      FRP.Reactive.Internal.Reactive
+      FRP.Reactive.Internal.Serial
+      FRP.Reactive.Internal.Timing
+      FRP.Reactive.Internal.TVal
+      FRP.Reactive.LegacyAdapters
+      FRP.Reactive.Num
+      FRP.Reactive.PrimReactive
+      FRP.Reactive.Reactive
+      FRP.Reactive.SImproving
+      FRP.Reactive.Sorted
+      FRP.Reactive.VectorSpace
+  other-modules:
+      Paths_reactive
+  default-language: Haskell2010

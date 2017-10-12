@@ -1,0 +1,59 @@
+name: reactive
+version: 0.11.5
+synopsis: Push-pull functional reactive programming
+category: reactivity, FRP
+description: >
+  /Reactive/ is a simple foundation for programming reactive systems
+  functionally.  Like Fran\/FRP, it has a notions of (reactive) behaviors and
+  events.  Unlike most previous FRP implementations, Reactive has a hybrid
+  demand/data-driven implementation, as described in the paper \"Push-pull
+  functional reactive programming\", <http://conal.net/papers/push-pull-frp/>.
+  .
+  This version of Reactive has some serious bugs that show up particularly
+  with some uses of the Event monad.  Some problems have been due to bugs
+  in the GHC run-time support for concurrency.  I do not know whether the
+  remaining problems in Reactive are still more subtle RTS issues, or
+  some subtle laziness bugs in Reactive.  Help probing the remaining
+  difficulties is most welcome.
+  .
+  Import "FRP.Reactive" for FRP client apps.  To make a Reactive adapter for an
+  imperative library, import "FRP.Reactive.LegacyAdapters".
+  .
+  Please see the project wiki page: <http://haskell.org/haskellwiki/reactive>
+  .
+  &#169; 2007-2009 by Conal Elliott; GNU AGPLv3 license (see COPYING).
+  I am not thrilled with GPL, and I doubt I'll stay with it for long.
+  If you would like different terms, please talk to me.
+  .
+  With contributions from: Robin Green, Thomas Davie, Luke Palmer,
+  David Sankel, Jules Bean, Creighton Hogg, Chuan-kai Lin, and Richard
+  Smith.  Please let me know if I've forgotten to list you.
+author: Conal Elliott
+maintainer: conal@conal.net
+homepage: http://haskell.org/haskellwiki/reactive
+bug-reports: http://trac.haskell.org/reactive
+copyright: (c) 2007-2009 by Conal Elliott
+license: OtherLicense
+license-file: COPYING
+stability: provisional
+library:
+  source-dirs: src
+  dependencies:
+  - base >= 4 && <5
+  - old-time
+  - random
+  - QuickCheck >= 2.1.0.2
+  - TypeCompose >= 0.8.0
+  - vector-space >= 0.5
+  - unamb >= 0.1.5
+  - checkers >= 0.2.3
+#  - category-extras >= 0.53.5
+  - Stream >= 0.3.1
+  - pointed
+  - comonad
+  - parallel
+  ghc-options:
+  - -Wall
+
+# Package-Url:         http://code.haskell.org/reactive
+# Cabal-Version:       >= 1.2

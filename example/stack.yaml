@@ -1,0 +1,5 @@
+resolver: nightly-2017-10-11
+packages:
+- .
+- ../reactive
+- ../unamb
